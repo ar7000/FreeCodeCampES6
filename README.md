@@ -14,3 +14,52 @@ Revisiting ES6 via FreeCodeCamp resources and copying passed code to Git repo as
     ```
     const squaredIntegers = arr.filter(a => a > 0 && Number.isInteger(a)).map(a => a * a);
     ```
+
+- Learned use of spread operator to copy one array to another:
+
+    ```
+    const arr1 = ["x", "y", "z"];
+    const arr2 = [...arr1];
+
+    ```
+
+    Differs from simply sayying arr2 = arr1 in that it will unpack the array into arr2 so it can be used independently of arr1, rather than just looking up the arr1 variable.
+
+- Learned how to use destructuring assignment to pass and the value of an object's specific key to a new variable.
+    - Takes key name of existing object and the variable name to which it is to be assigned, then the name of the existing object itself in order to look up the value. Example:
+
+    ```
+
+    const albums = {a: "The White Album", b: "The Black Album"};
+
+    const {b:betterAlbum} = albums;
+
+    //Logging betterAlbum will now output "The Black Album";
+
+    ```
+
+    - Can also use to access nested objects:
+
+    ```
+
+    const shoppingList = {
+        fresh:
+            {
+            dairy: "milk",
+            vegetables: "carrots",
+            obviously:"pizza"
+            },
+        
+        tins:
+            {
+            soup: "tomato",
+            fruit: "pears",
+            vegetables:"peas"
+            },
+    }
+
+    const {fresh:{dairy:dairyOnly}} = shoppingList;
+
+    //Logging dairyOnly will now output "milk";
+
+    ```

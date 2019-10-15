@@ -63,3 +63,31 @@ Revisiting ES6 via FreeCodeCamp resources and copying passed code to Git repo as
     //Logging dairyOnly will now output "milk";
 
     ```
+
+- Learned to use destructuring to pass an array index's value to new variables, e.g the following will swap around the values of a and b:
+
+    ```
+    let a = 8, b = 6;
+    
+    (() => {
+
+    [a,b] = [b,a];
+
+    })();
+    ```
+
+    - Also works with rest operator. Following would mean newArr was equal to [3,4,5,6,7,8,9,10].
+
+    ```
+    const source = [1,2,3,4,5,6,7,8,9,10];
+
+    function removeFirstTwo(list) {
+        "use strict";
+        
+        const [,,...arr] = list;
+        
+        return arr;
+    }
+
+    const newArr = removeFirstTwo(source);
+    ```

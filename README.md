@@ -91,3 +91,31 @@ Revisiting ES6 via FreeCodeCamp resources and copying passed code to Git repo as
 
     const newArr = removeFirstTwo(source);
     ```
+
+- Learned how to create an object from function params by using object property shorthand. Following example creates a function that when called would create an object using name, age and gender as keys, and the values passed to the function as the value of each key respectively.
+
+    ```
+    const createPerson = (name, age, gender) => {
+    
+    "use strict";
+
+    return {name,age,gender};
+
+    };
+
+    ```
+
+- Learned to use constructor functions with class syntax. Creates a new object based on function params. Example:
+
+    ```
+    class Musician{
+        constructor(name,instrument){
+            this.name = name;
+            this.instrument = instrument;
+        }
+    }
+
+    const hetfield = new Musician("James Hetfield", "Guitar");
+
+    console.log(hetfield.instrument); // Expect this to log Guitar to console.
+    ```
